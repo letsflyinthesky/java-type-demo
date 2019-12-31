@@ -16,7 +16,8 @@ public class ParameterizedDemo {
     private Map<String, String> map;
     Map<List<String>, String> map2;
     public static void main(String[] args) throws NoSuchFieldException {
-        Field map = ParameterizedDemo.class.getDeclaredField("map");
+//        Field map = ParameterizedDemo.class.getDeclaredField("map");
+        Field map = ParameterizedDemo.class.getDeclaredField("map2");
         if (!map.isAccessible()) {
             map.setAccessible(true);
         }

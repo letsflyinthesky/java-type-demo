@@ -31,7 +31,15 @@ public class TypeVariableDemo<K extends Comparable & Serializable, V> {
 
 
         System.out.println(keyType.getGenericDeclaration());
+        System.out.println(keyType.getGenericDeclaration() instanceof Class);
+        if (keyType.getGenericDeclaration() instanceof Class) {
+            System.out.println((Class) keyType.getGenericDeclaration());
+        }
         System.out.println(valueType.getGenericDeclaration());
+        System.out.println(valueType.getGenericDeclaration() instanceof Class);
+        if (valueType.getGenericDeclaration() instanceof Class) {
+            System.out.println((Class) valueType.getGenericDeclaration());
+        }
 
         System.out.println("k的上界");
         for (Type type : keyType.getBounds()) {
